@@ -1006,6 +1006,6 @@ const input = ["forward 2",
 
 //another solution
 const movementX = input.filter(el => el.startsWith("forward")).map(el => parseInt(el.replace("forward ", ""))).reduce((a, b) => a + b)
-const movementY = input.filter(el => el.startsWith("up") || el.startsWith("down")).map(el => parseInt(el.replace(" ", "").replace("up", "-").replace("down", ""))).reduce((a, b) => a + b)
+const movementY = input.filter(el => el.startsWith("up") || el.startsWith("down")).map(el => parseInt(el.replace("up ", "-").replace("down ", ""))).reduce((a, b) => a + b)
 
 console.log(movementX * movementY)
